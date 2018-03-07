@@ -1,7 +1,7 @@
 # kastr
 Clojure wrapper for Kafka Streams
 
-[![Build Status](https://travis-ci.org/ThatGuyHughesy/kastr.svg?branch=master)](https://travis-ci.org/ThatGuyHughesy/creddit)
+[![Build Status](https://travis-ci.org/ThatGuyHughesy/kastr.svg?branch=master)](https://travis-ci.org/ThatGuyHughesy/kastr)
 [![Clojars Project](https://img.shields.io/clojars/v/kastr.svg)](https://clojars.org/kastr)
 
 ## Installation
@@ -102,6 +102,11 @@ Run tests
 ```sh
 $ lein test
 ```
+
+## Contributing
+
+Want to become a Kastr [contributor](https://github.com/ThatGuyHughesy/kastr/blob/master/CONTRIBUTORS.md)?  
+Then checkout our [code of conduct](https://github.com/ThatGuyHughesy/kastr/blob/master/CODE_OF_CONDUCT.md) and [contributing guidelines](https://github.com/ThatGuyHughesy/kastr/blob/master/CONTRIBUTING.md).
 
 ## Copyright & License
 
