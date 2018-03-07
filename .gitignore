@@ -4,3 +4,4 @@
 .lein-failures
 .nrepl-port
 target
+pom.xml
