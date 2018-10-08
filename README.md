@@ -70,8 +70,7 @@ Example:
         (info "Shutting down Kafka Streams")
         (if kafka-streams
           (stop kafka-streams))))
-    (assoc component
-      :kafka-streams nil)))
+    (assoc component :kafka-streams nil)))
 ```
 
 The `kafka-streams-topology` is where you carry out your logic.
@@ -81,12 +80,17 @@ Basic Example:
 Take messages from the input topic and send them to the output topic.
 
 ```clojure
+(defn mapv-function
+  [v]
+  (+ 1 v))
+
 (defn basic-kafka-streams-topology
   [configuration stream-builder]
   (let [{:keys [job]} configuration
         {:keys [input-topic output-topic]} job
         message-stream (stream stream-builder [input-topic])]
-    (to message-stream output-topic)))
+    (-> (map-v message-stream mapv-function)
+        (ks/to output-topic))))
 ```
 
 ## Documentation
