@@ -3,16 +3,10 @@
             [kastr.core :refer :all]))
 
 (def test-configuration {:application-id "kafka-streams-test-1"
-                         :bootstrap-servers "localhost:9092"
-                         :zookeeper-connect "localhost:2181"})
+                         :bootstrap-servers "localhost:9092"})
 
-(def test-properties {"auto.offset.reset" "earliest"
-                      "num.stream.threads" "1"
-                      "bootstrap.servers" "localhost:9092"
-                      "zookeeper.connect" "localhost:2181"
-                      "application.id" "kafka-streams-test-1"
-                      "key.serde" "org.apache.kafka.common.serialization.Serdes$StringSerde"
-                      "value.serde" "org.apache.kafka.common.serialization.Serdes$StringSerde"})
+(def test-properties {"application.id" "kafka-streams-test-1"
+                      "bootstrap.servers" "localhost:9092"})
 
 (deftest ^:unit test-configuration-mapping-value
   (testing "with :application-id"
